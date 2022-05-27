@@ -14,16 +14,20 @@ class Program {
 class Conversor {
 	private int num;
 
+	public Conversor(int num) {
+		this.num = num;
+	}
+	
 	public void SetNum(int num){
 		if (num > 0) this.num = num;
 	}
 
 	public int GetNum(){
-		return this.num;
+		return num;
 	}
 
 	public string Binario(){
-		int x = this.num;
+		int x = num;
 		int remainder;
 		string result = " ";
 		

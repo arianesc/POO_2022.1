@@ -6,9 +6,13 @@ class Program {
 	}
 
 class Equacao{
-	private double a;
-	private double b;
-	private double b;
+	private double a, b, c;
+
+	public Equacao(double a, double b, double c){
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 
 	public void SetABC(double a; double b; double c) {
 		this.a = a;

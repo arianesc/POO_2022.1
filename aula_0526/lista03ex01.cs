@@ -18,9 +18,13 @@ class Program {
 }
 
 class Retangulo {
-	private double b;
-	private double h;
+	private double b, h;
 
+	public Retangulo(double b, h){
+		this.b = b;
+		this.h = c;
+	}
+	
 	public void SetBase(double b){
 		this.b = b;	
 	}
@@ -30,25 +34,25 @@ class Retangulo {
 	}
 	
 	public double GetBase(){
-			return this.b;
+			return b;
 	}
 		
 	public double GetAltura(){
-		return this.h;
+		return h;
 	}
 		
 	public double CalcArea(){
 		return b*h;
 	}
 		
-	// public double CalcDiagonal(){
-	// 	// raiz de b^2 + h^2
-	// 	return	Math.Sqrt((b*b) + (h*h));
+	public double CalcDiagonal(){
+		// raiz de b^2 + h^2
+		return	Math.Sqrt((b*b) + (h*h));
 		
-	// }
+	}
 
 	public override string ToString(){
-		return $"base: {b}, altura: {h}";
+		return $"base = {b}, altura = {h}";
 	}
 	
 	}

@@ -2,10 +2,8 @@ using System;
 
 class Program {
   public static void Main() {
-		Frete x = new Frete();
-		x.SetPeso(1);
-		x.SetDistancia(10);
-
+		Frete x = new Frete(100, 10);
+	
 		Console.WriteLine(x.GetDistancia());
 		Console.WriteLine(x.GetPeso());
 		Console.WriteLine(x.CalcFrete());
@@ -13,10 +11,23 @@ class Program {
 
 	}
 }
-class Frete {
-	private double distancia;
-	private double peso;
 
+
+class Frete {		
+	private double distancia, peso;
+	public Frete(double distancia, double peso){ // construtor equivalente ao init do python!
+		this.distancia = distancia;
+		this.peso = peso;
+	}
+
+	public double GetDistancia(){
+		return distancia;
+	}
+
+	public double GetPeso(){
+		return peso;
+	}
+	
 	public void SetDistancia(double d){
 		if (d > 0) this.distancia = d; 
 	}
@@ -25,19 +36,11 @@ class Frete {
 		if (p > 0) this.peso = p; 
 	}
 
-	public double GetDistancia(){
-		return this.distancia;
-	}
-
-	public double GetPeso(){
-		return this.peso;
-	}
-
 	public double CalcFrete(){
-		return (distancia*peso*0.1);
+		return (distancia*peso*0.01);
 	}
 
 	public override string ToString(){
-		return $"distancia: {distancia}, peso: {peso}";
+		return $"distancia = {distancia} km, peso = {peso} kg";
 	}	
 }
